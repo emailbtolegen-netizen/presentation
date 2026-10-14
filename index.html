@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЖКХ города Атырау</title>
+<meta name="description" content="Отдел ЖКХ и жилищной инспекции г. Атырау: текущее состояние, основные проекты и потребность в бюджетном финансировании.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progressbar" id="progress"></div>
+
+<div class="stage" id="stage">
+
+<!-- ===== 1. TITLE ===== -->
+<section class="slide title" data-title="Титульный слайд">
+  <div class="main">
+    <img class="tkh anim" style="--i:0" src="img/logo-tkh-clear.png" alt="Атырау ТКШ — жилищно-коммунальное хозяйство">
+    <div>
+      <div class="eyebrow anim" style="--i:1">Отдел ЖКХ и жилищной инспекции г. Атырау</div>
+      <h1 class="anim" style="--i:2">Жилищно-коммунальное хозяйство <span>города Атырау</span></h1>
+      <div class="rule anim" style="--i:3"></div>
+      <p class="sub anim" style="--i:3">Текущее состояние, основные проекты и потребность в бюджетном финансировании</p>
+    </div>
+    <div class="meta anim" style="--i:4">
+      <div>Место<b>г. Атырау</b></div>
+      <div>Дата<b>Октябрь 2026</b></div>
+    </div>
+  </div>
+  <div class="side anim" style="--i:2">
+    <img src="img/logo-atyrau-white.png" alt="Атырау">
+  </div>
+</section>
+
+<!-- ===== 2. KEY FIGURES ===== -->
+<section class="slide" data-title="Основные показатели отдела">
+  <div class="s-head"><div><span class="s-num">Отдел ЖКХ</span><h2>Основные показатели отдела</h2></div></div>
+  <div class="s-body" style="grid-template-columns:1.1fr 1fr 1fr;grid-template-rows:1fr 1fr">
+    <div class="card kpi dark" style="grid-row:span 2;padding:40px">
+      <span style="margin:0 0 16px;font-size:16px">Годовой бюджет на 2026 год</span>
+      <b style="font-size:110px">56<small>млрд тг</small></b>
+      <span style="margin-top:24px;font-size:16px;max-width:380px">Финансирование проектов в сфере жилищно-коммунального хозяйства города</span>
+    </div>
+    <div class="card kpi" style="padding:32px"><b style="font-size:64px">107</b><span style="font-size:17px">проектов в работе отдела</span></div>
+    <div class="card kpi" style="padding:32px"><b style="font-size:64px">50</b><span style="font-size:17px">подрядных организаций</span></div>
+    <div class="card" style="grid-column:span 2;padding:28px 32px">
+      <h3>Кадровый состав</h3>
+      <div class="row c3" style="gap:24px">
+        <div class="kpi"><b>28</b><span>штатных единиц госслужащих</span></div>
+        <div class="kpi t-gold"><b>6</b><span>вакантных должностей</span></div>
+        <div class="kpi"><b>14</b><span>внештатных сотрудников</span></div>
+      </div>
+      <div class="staff"><i style="flex:22;background:var(--navy)">22 — по факту</i><i style="flex:6;background:var(--gold)">6</i></div>
+      <div class="legend" style="margin:0"><span><i style="background:var(--navy)"></i>Занятые штатные единицы</span><span><i style="background:var(--gold)"></i>Вакантные должности</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. HOUSING ===== -->
+<section class="slide" data-title="Жилищный фонд: многоквартирные дома">
+  <div class="s-head"><div><span class="s-num">Жилищный фонд</span><h2>Многоквартирные дома</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row c4">
+      <div class="card kpi"><b>1 239</b><span>многоквартирных домов в реестре</span></div>
+      <div class="card kpi"><b>63 340</b><span>квартир</span></div>
+      <div class="card kpi"><b>4,11<small>млн м²</small></b><span>общая площадь</span></div>
+      <div class="card kpi t-red"><b>379<small>· 30,6%</small></b><span>домов старше 50 лет (постройка до 1976 г.)</span></div>
+    </div>
+    <div class="row" style="grid-template-columns:1.6fr 1fr">
+      <div class="card flex"><h3>Дома по периоду постройки</h3><div class="grow"><div class="vbars" id="chartDecades"></div></div>
+        <div class="legend"><span><i style="background:var(--gold)"></i>построены до 1990 г.</span><span><i style="background:var(--blue)"></i>после 1990 г.</span></div></div>
+      <div class="col">
+        <div class="card kpi grow t-gold"><b>686<small>домов · 55%</small></b><span>построены до 1990 года</span></div>
+        <div class="card kpi grow t-blue"><b>469<small>домов</small></b><span>новое строительство 2000–2024 гг., ≈30 тыс. квартир</span></div>
+        <div class="callout ask big"><div class="label">Вывод</div>Почти треть фонда старше 50 лет — основной объём будущих затрат на капремонт и замену инженерных сетей</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. TECH STATE ===== -->
+<section class="slide" data-title="Техническое состояние и управление МЖД">
+  <div class="s-head"><div><span class="s-num">Жилищный фонд</span><h2>Техническое состояние и управление МЖД</h2></div></div>
+  <div class="s-body" style="grid-template-rows:1fr auto">
+    <div class="row" style="grid-template-columns:1fr 1.5fr">
+      <div class="card flex"><h3>Материал стен, домов</h3><div class="grow center-y"><div class="donut-row" id="chartWalls"></div></div></div>
+      <div class="row c3" style="grid-template-rows:1fr 1fr;gap:16px">
+        <div class="card kpi sm t-red"><b>209</b><span>гипсоблочных домов 1945–1980 гг., из них 208 — старше 50 лет</span></div>
+        <div class="card kpi sm t-gold"><b>345<small>· 27,8%</small></b><span>домов без формы управления (9 147 квартир)</span></div>
+        <div class="card kpi sm"><b>13%</b><span>домов с отметкой о проведённом ремонте (162 из 1 239)</span></div>
+        <div class="card kpi sm"><b>589</b><span>лифтов в 230 домах</span></div>
+        <div class="card kpi sm t-green"><b>82,6%</b><span>домов на теплоснабжении от ТЭЦ (1 024)</span></div>
+        <div class="card kpi sm"><b>209</b><span>домов с индивидуальным отоплением</span></div>
+      </div>
+    </div>
+    <div class="callout ask big"><div class="label">Приоритеты</div>Обследование 208 гипсоблочных домов старше 50 лет — кандидаты на капремонт или расселение. Перевод 345 домов без управления в ОСИ / управляющие компании — условие для участия в программах ремонта.</div>
+  </div>
+</section>
+
+<!-- ===== 5. THERMO ===== -->
+<section class="slide" data-title="Термомодернизация МЖД 2020–2024 гг.">
+  <div class="s-head"><div><span class="s-num">Жилищный фонд</span><h2>Термомодернизация МЖД 2020–2024 гг.</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row c4">
+      <div class="card kpi"><b>75</b><span>объектов: дома, подъезды, лифты</span></div>
+      <div class="card kpi"><b>4,15<small>млрд тг</small></b><span>выделено кооперативам собственников</span></div>
+      <div class="card kpi t-green"><b>65<small>· 87%</small></b><span>объектов — работы завершены</span></div>
+      <div class="card kpi t-red"><b>10<small>объектов</small></b><span>2020–2022 гг. не завершены (712,4 млн тг)</span></div>
+    </div>
+    <div class="row" style="grid-template-columns:1.6fr 1fr">
+      <div class="card flex"><h3>Объекты и выделенные средства по годам</h3><div class="grow"><div class="vbars" id="chartThermo"></div></div>
+        <div class="legend"><span><i style="background:var(--blue)"></i>Завершены</span><span><i style="background:var(--gold)"></i>Не завершены</span></div></div>
+      <div class="col">
+        <div class="card kpi grow"><b>15<small>позиций</small></b><span>замена лифтов на 412,2 млн тг</span></div>
+        <div class="callout ask big grow center-y"><div class="label">Что необходимо</div>Завершить 10 объектов 2020–2022 гг. (выделено 712,4 млн тг); переразработать 37 ПСД</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. WATER ===== -->
+<section class="slide" data-title="Капремонт объектов водоснабжения">
+  <div class="s-head"><div><span class="s-num">Водоснабжение</span><h2>Капитальный ремонт объектов водоснабжения</h2></div>
+    <p class="lead">Цель — качественная питьевая вода, снижение износа и аварийности сетей. Завершение — 2026 год</p></div>
+  <div class="s-body" style="grid-template-columns:640px 1fr">
+    <div class="pgrid" style="grid-template-columns:1fr 1fr;align-content:start">
+      <figure class="ph" style="grid-column:span 2;aspect-ratio:706/351"><img src="img/water-map.jpg" alt=""><figcaption>Схема участков капремонта водопроводных сетей</figcaption></figure>
+      <figure class="ph" style="aspect-ratio:468/330"><img src="img/water-1.jpg" alt=""><figcaption>Монтаж оборудования в колодце</figcaption></figure>
+      <figure class="ph" style="aspect-ratio:468/330"><img src="img/water-2.jpg" alt=""><figcaption>Новая запорная арматура</figcaption></figure>
+    </div>
+    <div class="col">
+      <div class="card stages">
+        <div class="stg"><div class="n">1</div><div class="info"><b>32,6 км</b><span>договор 2 978,7 млн тг</span></div><div class="st"><span class="pill ok">завершающая стадия</span></div></div>
+        <div class="stg"><div class="n">2</div><div class="info"><b>19,3 км</b><span>договор 1 880,1 млн тг</span></div><div class="st"><header><span>18,4 км</span><b>95,3%</b></header><div class="bar"><i data-w="95.3"></i></div></div></div>
+        <div class="stg"><div class="n">3</div><div class="info"><b>20,7 км</b><span>договор 2 146,8 млн тг</span></div><div class="st"><header><span>14,6 км</span><b>70,5%</b></header><div class="bar"><i data-w="70.5"></i></div></div></div>
+      </div>
+      <div class="nums">
+        <div><small>Общая протяжённость</small><b>72,6<small>км</small></b></div>
+        <div><small>Общая стоимость</small><b>7 014,6<small>млн тг</small></b></div>
+        <div><small>Освоено (1–3 этапы)</small><b>3 908,3<small>млн тг</small></b></div>
+      </div>
+      <div class="card people grow center-y">
+        <div><small>Подрядная организация</small>ТОО «Бекболатовтар Құрылыс Компаниясы»</div>
+        <div><small>Технический надзор</small>«Тараз-Технопроект» (1 этап), «Саулет Эксперт» (2), «Building Control» (3)</div>
+        <div><small>Авторский надзор</small>ТОО «ТМ Проект Строй»</div>
+      </div>
+      <div class="need"><div class="t"><span>Требуется</span>для завершения работ в 2026 году</div><b>3 097,4<small>млн тг</small></b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. SEWER ===== -->
+<section class="slide" data-title="Канализация методом санации">
+  <div class="s-head"><div><span class="s-num">Водоотведение</span><h2>Капитальный ремонт канализации методом санации</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="flow">
+      <div class="step bad"><small>До ремонта</small><p>Изношенные канализационные трубы — 33,4 км, 3 пусковых комплекса</p></div>
+      <div class="step"><small>Санация — 18,0 км</small><p>Восстановление труб изнутри без вскрытия грунта; остальные участки — иными методами</p></div>
+      <div class="step good"><small>После ремонта</small><p>Обновлённая сеть: герметичность и пропускная способность</p></div>
+    </div>
+    <div class="row" style="grid-template-columns:1fr 540px">
+      <div class="col">
+        <div class="card stages">
+          <div class="stg"><div class="n">1</div><div class="info"><b>12 972 м</b><span>договор 8 996,9 млн тг</span></div><div class="st"><header><span>выполнено</span><b>40%</b></header><div class="bar"><i data-w="40"></i></div></div></div>
+          <div class="stg"><div class="n">2</div><div class="info"><b>12 364 м</b><span>договор 7 848,6 млн тг</span></div><div class="st"><header><span>выполнено</span><b>54%</b></header><div class="bar"><i data-w="54"></i></div></div></div>
+          <div class="stg"><div class="n">3</div><div class="info"><b>8 065 м</b><span>договор 3 173,1 млн тг</span></div><div class="st"><header><span>выполнено</span><b>88%</b></header><div class="bar"><i data-w="88"></i></div></div></div>
+        </div>
+        <div class="nums">
+          <div><small>Протяжённость</small><b>33,4<small>км</small></b></div>
+          <div><small>Методом санации</small><b>18,0<small>км</small></b></div>
+          <div><small>Сумма договоров</small><b>20 018,6<small>млн тг</small></b></div>
+        </div>
+        <div class="card people grow center-y">
+          <div><small>Подрядные организации</small>«Сапа Құрылыс 2007» (комплексы 1–2), «Агидель-Ас» (3)</div>
+          <div><small>Технический надзор · Авторский надзор</small>«Мерей-Тайынша» (1–2), «АстанаДорАркитекс» (3) · ТОО «Стримлайн»</div>
+        </div>
+      </div>
+      <div class="pgrid" style="grid-template-columns:1fr 1fr;align-content:start">
+        <figure class="ph" style="grid-column:span 2;aspect-ratio:730/439"><img src="img/sewer-1.jpg" alt=""><figcaption>Работы по санации канализационной сети</figcaption></figure>
+        <figure class="ph" style="aspect-ratio:5/4"><img src="img/sewer-2.jpg" alt=""><figcaption>Монтаж колодца</figcaption></figure>
+        <figure class="ph" style="aspect-ratio:5/4"><img src="img/sewer-3.jpg" alt=""><figcaption>Санация трубы изнутри</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. SEWER IN DISTRICTS ===== -->
+<section class="slide" data-title="Канализационные сети в жилых массивах">
+  <div class="s-head"><div><span class="s-num">Водоотведение</span><h2>Канализационные сети в жилых массивах</h2></div></div>
+  <div class="s-body" style="grid-template-columns:860px 1fr">
+    <div class="col">
+      <figure class="ph" style="aspect-ratio:775/433"><img src="img/sewer-map.jpg" alt=""><figcaption>Участки новых канализационных сетей</figcaption></figure>
+      <div class="card grow center-y"><h3>Охват — 12 жилых массивов</h3>
+        <div class="chips"><span>Мясокомбинат</span><span>Атырау</span><span>Жумыскер-2</span><span>Оркен-2</span><span>Сарыкамыс-2</span><span>Балауса</span><span>Самал</span><span>Нурсая</span><span>Жеруйык</span><span>Лесхоз-2</span><span>Мунайшы</span><span>Химпоселок</span></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row c2" style="gap:16px">
+        <div class="card kpi"><b>112,6<small>км</small></b><span>новых канализационных сетей</span></div>
+        <div class="card kpi"><b>11</b><span>участков в жилых массивах</span></div>
+      </div>
+      <div class="card kpi"><b>598<small>ИЖД</small></b><span>мкр Сарыкамыс-2, глубина прокладки 1,8 м</span></div>
+      <div class="callout grow center-y"><div class="label">Статус</div>ПСД по мкр Сарыкамыс-2 — на рассмотрении в РГП «Госэкспертиза»; авторский надзор — ТОО «Шындау». После заключения — корректировка ПСД по остальным 10 участкам</div>
+      <div class="callout ask grow center-y"><div class="label">Предложение</div>Передать реализацию рабочего проекта (11 участков) из ГУ «Городской отдел ЖКХ и жилищной инспекции» в ГУ «Городской отдел строительства»</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. KOS ===== -->
+<section class="slide" data-title="Правобережные КОС">
+  <div class="s-head"><div><span class="s-num">Очистные сооружения</span><h2>Правобережные КОС — реконструкция</h2></div>
+    <p class="lead">Мощность — 31 тыс. м³ в сутки</p></div>
+  <div class="s-body" style="grid-template-columns:820px 1fr">
+    <div class="col">
+      <figure class="ph" style="aspect-ratio:1480/712"><img src="img/kos.jpg" alt=""><figcaption>Генеральный план реконструкции правобережных КОС</figcaption></figure>
+      <div class="card grow center-y"><div class="timeline">
+        <div class="tl"><b>07.10.2021</b><span>начало СМР</span></div>
+        <div class="tl"><b>Сентябрь 2022</b><span>начало корректировки</span></div>
+        <div class="tl"><b>13.11.2023</b><span>заключение экспертизы</span></div>
+        <div class="tl now"><b>Конец 2026</b><span>завершение СМР</span></div>
+      </div></div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h3>Ход работ</h3>
+        <div class="prog"><header><span>Освоено 35,2 из 39,7 млрд тг</span><b>88,7%</b></header><div class="bar green"><i data-w="88.7"></i></div></div>
+        <div class="prog"><header><span>Выполнено СМР</span><b>85%</b></header><div class="bar green"><i data-w="85"></i></div></div>
+      </div>
+      <div class="row c2" style="gap:16px">
+        <div class="card kpi sm t-red"><b>944,0<small>млн</small></b><span>задолженность на 01.10.2026</span></div>
+        <div class="card kpi sm t-gold"><b>4,5<small>млрд</small></b><span>остаток СМР</span></div>
+      </div>
+      <div class="callout problem grow center-y"><div class="label">Проблема</div>Сентябрь 2025 – март 2026: оплата не в полном объёме, подрядчик работал на свои средства. Замечания КЦМ ЖКХ по обеззараживанию (гипохлорит → УФ)</div>
+      <div class="need"><div class="t"><span>Что необходимо</span>Погасить долг, завершить СМР до конца 2026 г.</div></div>
+      <div class="people" style="font-size:14px"><div><small>Генподрядчик · Технадзор · Авторский надзор</small>АО «Павлодарский речной порт» · ТОО «АДС Сапа» · ТОО «Құрылысэкспертпроект»</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. KVADRAT ===== -->
+<section class="slide" data-title="Пруд-испаритель «Квадрат»">
+  <div class="s-head"><div><span class="s-num">Очистные сооружения</span><h2>Пруд-испаритель «Квадрат»</h2></div>
+    <p class="lead">Принимает очищенные сточные воды правобережных КОС после обеззараживания</p></div>
+  <div class="s-body" style="grid-template-columns:1fr 1fr">
+    <div class="col">
+      <div class="row c2" style="gap:16px">
+        <div class="card kpi dark"><b>7,26<small>млрд тг</small></b><span>сумма договора</span></div>
+        <div class="card kpi t-green"><b>4,3<small>млрд тг</small></b><span>освоено с 2022 года</span></div>
+      </div>
+      <div class="card grow center-y"><h3>Выполненные работы</h3>
+        <ul class="checks" style="font-size:17px;line-height:1.4">
+          <li>На 1-й и 2-й технологических площадках размещены 102 геотубы</li>
+          <li>Установлена и подключена станция приготовления и дозирования флокулянта</li>
+          <li>Завершены земляные работы по подготовке основания на трёх участках технологической площадки</li>
+          <li>Смонтированы насосные станции перекачки осадка из отстойника-уплотнителя на участок биологического осадка</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card flex grow"><h3>Откачка осадка, м³</h3><div class="grow center-y"><div class="donut-row" id="chartSludge"></div></div></div>
+      <div class="callout problem"><div class="label">Проблема</div>Для завершения работ необходимо своевременное финансирование возобновления и продолжения СМР</div>
+      <div class="need"><div class="t"><span>Что необходимо</span>Ускорить выделение средств, порядка</div><b>1,6<small>млрд тг</small></b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. CABLE ===== -->
+<section class="slide" data-title="Кабельные линии электроснабжения — 162 км">
+  <div class="s-head"><div><span class="s-num">Электроснабжение</span><h2>Кабельные линии электроснабжения — 162 км</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="flow">
+      <div class="step"><small>Существующая сеть</small><p>Изношенные подземные высоковольтные линии</p></div>
+      <div class="step bad"><small>Проблема</small><p>Высокий износ и аварийность</p></div>
+      <div class="step"><small>Замена</small><p>162 км в городе и пригородных сёлах</p></div>
+      <div class="step"><small>Новый кабель</small><p>Изоляция из сшитого полиэтилена (СПЭ)</p></div>
+      <div class="step good"><small>Результат</small><p>Бесперебойное электроснабжение, меньше аварий</p></div>
+    </div>
+    <div class="row" style="grid-template-columns:282px 1fr 1fr">
+      <figure class="ph" style="aspect-ratio:570/1120;align-self:start"><img src="img/cable.jpg" alt=""><figcaption>Прокладка кабельной линии</figcaption></figure>
+      <div class="col">
+        <div class="card grow"><h3>Паспорт проекта</h3>
+          <dl class="dl">
+            <dt>Заказчик</dt><dd>ГУ «Отдел ЖКХ, ПТ и АД г. Атырау»</dd>
+            <dt>Проектировщик</dt><dd>ТОО «Redline Pro»</dd>
+            <dt>Протяжённость</dt><dd>162 км новых кабельных линий</dd>
+            <dt>Статус</dt><dd><span class="pill warn">государственная экспертиза</span></dd>
+          </dl>
+        </div>
+        <div class="need"><div class="t"><span>Стоимость (предварительно)</span>уточняется по БИП</div><b>15,9<small>млрд тг</small></b></div>
+      </div>
+      <div class="col">
+        <div class="callout grow center-y"><div class="label">Районы охвата</div><b>4 сельских округа:</b> Кайыршахты, Дамба, Атырау, Еркинкала.<br><b>11 микрорайонов:</b> Береке, Алмагуль, Нурсая-3, Сарыкамыс-2, Оркен, Балауса, Жумыскер, Жумыскер-2, Жилгородок, Водник, Балыкшы; ул. Азаттык, канал Ерик Мостовой</div>
+        <div class="callout done"><div class="label">Азаттык, 63 · 65 · 67 · 67А</div>Замена основной сети многоэтажных домов; ПСД готова, реализация — по мере выделения средств</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. LIGHTING ===== -->
+<section class="slide" data-title="Уличное освещение — 7 этап">
+  <div class="s-head"><div><span class="s-num">Электроснабжение</span><h2>Уличное освещение — 7 этап</h2></div>
+    <p class="lead">ГЧП с АО «Батыс Транзит». После 7 этапа — ≈1 640 освещённых улиц (+22,4%)</p></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row c4">
+      <div class="card kpi t-green"><b>1 340<small>улиц</small></b><span>освещено: I–VI этапы, 2017–2025</span></div>
+      <div class="card kpi"><b>≈300<small>улиц</small></b><span>7 этап (план) · ≈152 км освещения</span></div>
+      <div class="card kpi"><b>15,6<small>млрд тг</small></b><span>стоимость 7 этапа, бюджетные средства</span></div>
+      <div class="card kpi"><b>1,3<small>млрд тг</small></b><span>содержание и текущий ремонт I–III этапов</span></div>
+    </div>
+    <div class="row" style="grid-template-columns:1.5fr 1fr">
+      <div class="card flex"><h3>Освещено улиц по этапам ГЧП</h3><div class="grow"><div class="vbars" id="chartLight"></div></div>
+        <div class="legend"><span><i style="background:var(--blue)"></i>Выполнено</span><span><i style="background:var(--gold)"></i>План 7 этапа</span></div></div>
+      <div class="col">
+        <div class="callout ask big grow center-y"><div class="label">Влияние тарифа</div>С 01.10.2026 тариф вырос с 71,00 до 114,07 тг/кВт·ч (+60,7%). Новые ≈300 улиц увеличат расходы на электроэнергию</div>
+        <div class="need"><div class="t"><span>Требуется всего</span>7 этап + содержание I–III</div><b>16,9<small>млрд тг</small></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13. POLES ===== -->
+<section class="slide" data-title="Аварийные опоры ЛЭП">
+  <div class="s-head"><div><span class="s-num">Электроснабжение</span><h2>Аварийные опоры линий электропередачи</h2></div>
+    <p class="lead">Опоры в неудовлетворительном состоянии — угроза безопасности жителей</p></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row" style="grid-template-columns:1fr 1fr 1.3fr">
+      <div class="card kpi t-red"><b>2 700</b><span>аварийных опор выявлено</span></div>
+      <div class="card kpi t-gold"><b>2 414</b><span>осталось заменить</span></div>
+      <div class="callout problem center-y"><div class="label">Причина</div>Опоры ВЛ 0,4 кВ признаны аварийными; 2 100 опор на балансе отдела — в неудовлетворительном техническом состоянии</div>
+    </div>
+    <div class="row c2">
+      <div class="card flex pole">
+        <h3>С.о. Жанаталап · ВЛ 0,4 кВ</h3>
+        <div class="kpi"><b>600<small>опор</small></b></div>
+        <div class="prog grow center-y"><header><span>Заменено 286 из 600</span><b>47,7%</b></header><div class="bar green"><i data-w="47.7"></i></div></div>
+        <div class="nums" style="box-shadow:none">
+          <div><small>Выделено</small><b class="t-green">127,6<small>млн тг</small></b></div>
+          <div><small>Срок</small><b>до конца 2026</b></div>
+          <div><small>Стоимость 1 опоры</small><b>≈212,7<small>тыс. тг</small></b></div>
+        </div>
+      </div>
+      <div class="card flex pole">
+        <h3>Г. Атырау и прилегающие населённые пункты</h3>
+        <div class="kpi"><b>2 100<small>опор</small></b></div>
+        <div class="prog grow center-y"><header><span>Замена не начата</span><b>0%</b></header><div class="bar"><i data-w="0"></i></div></div>
+        <div class="nums" style="box-shadow:none">
+          <div><small>Требуется</small><b class="t-red">554,4<small>млн тг</small></b></div>
+          <div><small>Срок</small><b>2027 год</b></div>
+          <div><small>Стоимость 1 опоры</small><b>≈264,0<small>тыс. тг</small></b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 14. TARIFF ===== -->
+<section class="slide" data-title="Тариф на электроэнергию">
+  <div class="s-head"><div><span class="s-num">Электроснабжение</span><h2>Тариф на электроэнергию и расходы бюджета</h2></div>
+    <p class="lead">Объекты: уличное освещение, игровые и спортивные площадки, иные объекты на балансе акимата</p></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row" style="grid-template-columns:1.5fr 1fr">
+      <div class="card" style="display:flex;align-items:center;gap:30px">
+        <div class="kpi"><b>71,00</b><span>тг/кВт·ч до 30.09.2026</span></div>
+        <svg width="60" height="24" viewBox="0 0 60 24" fill="none" stroke="#e3a21a" stroke-width="3"><path d="M2 12h52M44 3l10 9-10 9"/></svg>
+        <div class="kpi t-red"><b>114,07</b><span>тг/кВт·ч без НДС с 01.10.2026</span></div>
+        <div class="kpi" style="margin-left:auto;text-align:right"><b style="color:var(--red)">+60,7%</b><span>+43,07 тг за кВт·ч</span></div>
+      </div>
+      <div class="card kpi t-red"><b>+769,7<small>млн тг</small></b><span>дополнительная нагрузка на бюджет в год; IV кв. 2026 — +192,4 млн</span></div>
+    </div>
+    <div class="row" style="grid-template-columns:1.5fr 1fr">
+      <div class="card flex"><h3>Расходы на электроэнергию, млн тг</h3><div class="grow"><div class="vbars" id="chartTariff"></div></div>
+        <div class="legend"><span><i style="background:var(--blue)"></i>По тарифу 71 тг</span><span><i style="background:var(--gold)"></i>По тарифу 114,07 тг</span></div></div>
+      <div class="col">
+        <div class="nums" style="grid-auto-flow:row;grid-template-columns:1fr 1fr">
+          <div><small>2025, факт</small><b>825,5<small>млн</small></b></div>
+          <div style="border-left:1px solid var(--line)"><small>9 мес. 2026, факт</small><b>951,6<small>млн</small></b></div>
+        </div>
+        <div class="callout grow center-y big"><div class="label">Потребление</div>≈17,87 млн кВт·ч в год. Потребность с 2027 года — в 2,47 раза выше факта 2025 года</div>
+        <div class="need"><div class="t"><span>Требуется</span>IV кв. 2026 — 509,6 млн; с 2027 г. ежегодно</div><b>2 038,4<small>млн</small></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 15. HEAT ===== -->
+<section class="slide" data-title="Теплоснабжение, ГВС и котельные">
+  <div class="s-head"><div><span class="s-num">Теплоснабжение</span><h2>Сети теплоснабжения, ГВС и котельные</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr auto">
+    <div class="row c4">
+      <div class="card kpi"><b>138<small>км</small></b><span>тепловых сетей</span></div>
+      <div class="card kpi t-gold"><b>16% → ≈11%</b><span>износ сетей: 22 км → 15,1 км после замены</span></div>
+      <div class="card kpi t-green"><b>6,9<small>км</small></b><span>замена ТС и ГВС, 3 лота, 354,4 млн тг</span></div>
+      <div class="card kpi"><b>15 + 38</b><span>котельных КОЖДГ + резерв</span></div>
+    </div>
+    <div class="row c3">
+      <div class="callout problem center-y"><div class="label">Проблема</div>Котельные и насосные ЖК «Самал Таун», «Family», «Абырой» изношены, не готовы к сезону. Долг КОЖДГ поставщикам — 76,4 млн тг</div>
+      <div class="callout done center-y"><div class="label">Что сделано</div>ТОО «Industry 2050» меняет 6,9 км сетей: Алмагуль, Лесхоз, Нурсая, Авангард, Канцева, Амандосова и др.</div>
+      <div class="callout ask center-y"><div class="label">Что необходимо · 435 млн тг</div>Котлы для ЖК — 388 млн, насосы — 47 млн; принять объекты на баланс; переразработать 37 ПСД термомодернизации</div>
+    </div>
+    <div class="pgrid" style="grid-template-columns:repeat(3,1fr)">
+      <figure class="ph" style="aspect-ratio:789/320"><img src="img/heat-1.jpg" alt=""><figcaption>Новые трубопроводы в изоляции</figcaption></figure>
+      <figure class="ph" style="aspect-ratio:789/320"><img src="img/heat-2.jpg" alt=""><figcaption>Прокладка сетей теплоснабжения и ГВС</figcaption></figure>
+      <figure class="ph" style="aspect-ratio:789/320"><img src="img/heat-3.jpg" alt=""><figcaption>Надземный участок обновлённой сети</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 16. SANITARY ===== -->
+<section class="slide" data-title="ТБО, санитарная очистка и дезинсекция">
+  <div class="s-head"><div><span class="s-num">Санитарное содержание</span><h2>ТБО, санитарная очистка и дезинсекция</h2></div>
+    <p class="lead">45 000 га, 6 сельских округов. В 2026 г. задействованы 20 КАМАЗ, 5 погрузчиков, 420 работников</p></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row c6" style="gap:16px">
+      <div class="card kpi sm"><b>1 000</b><span>контейнеров</span></div>
+      <div class="card kpi sm"><b>≈100</b><span>европлощадок</span></div>
+      <div class="card kpi sm"><b>7</b><span>мусоровозов</span></div>
+      <div class="card kpi sm t-green"><b>50+</b><span>свалок ликвидировано</span></div>
+      <div class="card kpi sm t-green"><b>≈3 000</b><span>насаждений</span></div>
+      <div class="card kpi sm t-green"><b>16+ т</b><span>отходов вывезено на субботниках</span></div>
+    </div>
+    <div class="row c3">
+      <div class="card flex san">
+        <h3>Санитарная очистка</h3>
+        <p class="grow" style="font-size:16.5px;line-height:1.45">Для полного охвата территории не хватает техники и людей: нужно ещё 10 погрузчиков, 5 КДМ, 10 КАМАЗ и 100 работников</p>
+        <div class="need" style="margin-top:16px"><div class="t"><span>Требуется</span>с НДС</div><b>4,6<small>млрд тг</small></b></div>
+      </div>
+      <div class="card flex san">
+        <h3>Покос травы</h3>
+        <p class="grow" style="font-size:16.5px;line-height:1.45">Низкие темпы покоса, неполный вывоз травы</p>
+        <div class="need" style="margin-top:16px"><div class="t"><span>Требуется</span>на 2027 год</div><b>460<small>млн тг</small></b></div>
+      </div>
+      <div class="card flex san">
+        <h3>Обработка от комаров</h3>
+        <p class="grow" style="font-size:16.5px;line-height:1.45">2026: договор с ТОО «AG Disinfection services» — 117,4 млн тг; охват неполный, закупки нужны до апреля. С 2027 г. — трёхлетний план с профильной организацией</p>
+        <div class="need" style="margin-top:16px"><div class="t"><span>Требуется</span>200 млн × 2 берега</div><b>400<small>млн тг</small></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 17. DOGS ===== -->
+<section class="slide" data-title="Отлов безнадзорных собак">
+  <div class="s-head"><div><span class="s-num">Санитарное содержание</span><h2>Отлов и утилизация безнадзорных собак</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr 1fr">
+    <div class="row c3">
+      <div class="card kpi t-green"><b style="font-size:52px">≈5 000</b><span>безнадзорных собак отловлено в 2026 году</span></div>
+      <div class="card kpi"><b style="font-size:52px">2<small>конкурса</small></b><span>проведено в 2026 году; 3-й — ожидается</span></div>
+      <div class="card kpi t-red"><b style="font-size:52px">Не оплачен</b><span>2-й договор за выполненный отлов</span></div>
+    </div>
+    <div class="row c2">
+      <div class="callout xl center-y"><div class="label">Текущая система</div>Работы по госзакупкам. Конкурсы 1 и 2 — только отлов и умерщвление. Конкурс 3 — отлов и утилизация с использованием крематория</div>
+      <div class="callout problem xl center-y"><div class="label">Проблема</div>Финансирование недостаточно. Скотомогильник в неудовлетворительном состоянии. Осенью численность растёт — риск у жилых массивов, школ и детсадов</div>
+    </div>
+    <div class="row c2">
+      <div class="callout done xl center-y"><div class="label">Что сделано</div>Отловлено ≈5 000 собак. Подготовлен 3-й конкурс с организацией утилизации через крематорий</div>
+      <div class="callout ask xl center-y"><div class="label">Что необходимо</div>Своевременные конкурсы; оплата 2-го договора; достаточное финансирование; капремонт скотомогильника или иной способ утилизации</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 18. 100 YARDS ===== -->
+<section class="slide" data-title="Благоустройство — 100 дворов">
+  <div class="s-head"><div><span class="s-num">Благоустройство</span><h2>Благоустройство дворовых территорий — 100 дворов</h2></div></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row c3">
+      <div class="card kpi"><b>76<small>из 100</small></b><span>дворов в работе — 179 многоквартирных домов</span></div>
+      <div class="card kpi t-green"><b>5<small>из 7</small></b><span>лотов завершены, оформляются акты приёмки</span></div>
+      <div class="card kpi t-red"><b>3,97<small>млрд тг</small></b><span>требуется для завершения проекта</span></div>
+    </div>
+    <div class="row" style="grid-template-columns:1.15fr 1fr">
+      <div class="col">
+        <div class="callout grow center-y"><div class="label">Что имеем</div>7 проектов, 7 договоров, СМР с марта 2023 г. Подрядчики: «Атырау Көлік» — 35 дворов, «Риголит» — 28, «SHEBERBUILD» — 13</div>
+        <div class="callout problem grow center-y"><div class="label">Проблема</div>Авангард и Лесхоз: СМР приостановлены — договор с «Атыраукөлік» не продлён. Алмагуль: договор истёк 31.12.2025, выполнено 70%</div>
+        <div class="callout done grow center-y"><div class="label">Что сделано</div>5 лотов завершены. Авангард / Лесхоз: экспертиза № АКК-0002/26 от 04.04.2026, стоимость 3,2 млрд. Направлено письмо в Минфин РК и АО «ЦЭФ» о восстановлении договора с ТОО «Атырау көлік»</div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3>Освоение средств</h3>
+          <div class="prog"><header><span>Освоено 6,83 из 10,8 млрд тг</span><b>63,2%</b></header><div class="bar green"><i data-w="63.2"></i></div></div>
+          <p style="font-size:14px;color:var(--muted);margin-top:10px">Стоимость договоров увеличена с 6,8 до 10,8 млрд тг после корректировки 6 из 7 проектов</p>
+        </div>
+        <div class="card grow center-y"><h3>Результат для жителей</h3>
+          <div class="res"><span>Проезды и тротуары</span><span>Парковки</span><span>Ограждения</span><span>Освещение</span><span>Детские площадки</span><span>Спортивные площадки</span><span>Мини-футбол</span><span>Контейнерные площадки</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 19. 150 YARDS ===== -->
+<section class="slide" data-title="Благоустройство — 150 дворов">
+  <div class="s-head"><div><span class="s-num">Благоустройство</span><h2>Благоустройство дворовых территорий — 150 дворов</h2></div>
+    <p class="lead">Разработка ПСД начата; финансирование — бюджет. Виды работ — как в проекте «100 дворов»</p></div>
+  <div class="s-body" style="grid-template-rows:auto 1fr">
+    <div class="row" style="grid-template-columns:1fr 1fr 1.5fr">
+      <div class="card kpi t-green"><b>50<small>МЖД</small></b><span>ПСД с положительной экспертизой (лоты 2 и 3)</span></div>
+      <div class="card kpi t-red"><b>8,9<small>млрд тг</small></b><span>требуется на реализацию лотов 2 и 3</span></div>
+      <div class="callout ask big center-y"><div class="label">Предложение отдела</div>Не единым проектом, а поэтапно: текущий ремонт и «Бюджет народного участия», с учётом готовых ПСД</div>
+    </div>
+    <div class="lots">
+      <div class="card lot"><header><b>Лот 1</b><span class="pill warn">ПСД в разработке</span></header><div class="who">ЛМ Транспроект</div><p>Авангард, Нұрсая, Владимирский, ул. Құрманғазы</p></div>
+      <div class="card lot"><header><b>Лот 2</b><span class="pill ok">ЭО-0015/25 от 12.03.2025</span></header><div class="who">Шымгорпроект</div><p>Нұрсая, СМП-136, СМП-163, Вокзал маңы, ул. Махамбет</p></div>
+      <div class="card lot"><header><b>Лот 3</b><span class="pill ok">ЭО-0014/25 от 12.03.2025</span></header><div class="who">Шымгорпроект</div><p>Авангард, Сәтбаев, Жилгородок, Балықшы</p></div>
+      <div class="card lot"><header><b>Лот 4</b><span class="pill warn">ПСД в разработке</span></header><div class="who">Редлайн Про</div><p>Нұрсая, СМП-163, ул. С. Датова, пр. Азаттық</p></div>
+      <div class="card lot"><header><b>Лот 5</b><span class="pill warn">ПСД в разработке</span></header><div class="who">ЛМ Транспроект</div><p>пр. Азаттық, Ескі аэропорт, Жеті қазына, ул. С. Датова, Гурьевский</p></div>
+      <div class="card lot"><header><b>Лот 6</b><span class="pill warn">ПСД в разработке</span></header><div class="who">Редлайн Про</div><p>Авангард, Сәтбаев, Нұрсая, Береке, Геолог</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 20. GALLERY ===== -->
+<section class="slide" data-title="Фотоотчёт">
+  <div class="s-head"><div><span class="s-num">Фотоотчёт</span><h2>Объекты в работе</h2></div>
+    <p class="lead">Нажмите на фото, чтобы открыть его на весь экран</p></div>
+  <div class="s-body" style="grid-template-rows:1fr auto">
+    <div class="carousel" data-carousel data-autoplay="4500" data-thumbs="galleryThumbs">
+      <div class="track">
+        <figure><img src="img/water-map.jpg" alt=""><figcaption>Водоснабжение · схема участков капремонта</figcaption></figure>
+        <figure><img src="img/water-1.jpg" alt=""><figcaption>Водоснабжение · монтаж оборудования в колодце</figcaption></figure>
+        <figure><img src="img/water-2.jpg" alt=""><figcaption>Водоснабжение · новая запорная арматура</figcaption></figure>
+        <figure><img src="img/sewer-1.jpg" alt=""><figcaption>Водоотведение · работы по санации сети</figcaption></figure>
+        <figure><img src="img/sewer-2.jpg" alt=""><figcaption>Водоотведение · монтаж колодца</figcaption></figure>
+        <figure><img src="img/sewer-3.jpg" alt=""><figcaption>Водоотведение · санация трубы изнутри</figcaption></figure>
+        <figure><img src="img/sewer-map.jpg" alt=""><figcaption>Канализационные сети в жилых массивах · 11 участков</figcaption></figure>
+        <figure><img src="img/kos.jpg" alt=""><figcaption>Правобережные КОС · генеральный план</figcaption></figure>
+        <figure><img src="img/cable.jpg" alt=""><figcaption>Электроснабжение · прокладка кабельной линии</figcaption></figure>
+        <figure><img src="img/heat-1.jpg" alt=""><figcaption>Теплоснабжение · новые трубопроводы</figcaption></figure>
+        <figure><img src="img/heat-2.jpg" alt=""><figcaption>Теплоснабжение · прокладка сетей ГВС</figcaption></figure>
+        <figure><img src="img/heat-3.jpg" alt=""><figcaption>Теплоснабжение · надземный участок сети</figcaption></figure>
+      </div>
+    </div>
+    <div class="thumbs" id="galleryThumbs"></div>
+  </div>
+</section>
+
+<!-- ===== 21. FINANCE ===== -->
+<section class="slide" data-title="Потребность в финансировании">
+  <div class="s-head"><div><span class="s-num">Финансирование</span><h2>Потребность в финансировании по направлениям</h2></div>
+    <p class="lead">Суммы относятся к разным периодам (2026, 2027, ежегодно)</p></div>
+  <div class="s-body" style="grid-template-columns:1.8fr 1fr">
+    <div class="card flex"><h3>Потребность, млрд тг</h3><div class="grow hbars" id="chartFinance"></div></div>
+    <div class="col">
+      <div class="card kpi dark grow" style="padding:30px"><span style="margin:0 0 10px">3 крупнейших направления</span><b style="font-size:64px">41,7<small>млрд тг</small></b><span>уличное освещение, кабельные линии, благоустройство дворов</span></div>
+      <div class="callout problem big grow center-y"><div class="label">Первоочередные</div>Котельные ЖК, аварийные опоры ЛЭП, правобережные КОС — безопасность жителей и бесперебойность услуг</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 22. PROBLEMS ===== -->
+<section class="slide" data-title="Проблемные вопросы">
+  <div class="s-head"><div><span class="s-num">Итоги</span><h2>Проблемные вопросы</h2></div>
+    <p class="lead">Пункты 1–3 — критический приоритет: безопасность жителей и бесперебойность коммунальных услуг</p></div>
+  <div class="s-body" style="align-content:start">
+    <div class="table-wrap problems">
+      <table>
+        <thead><tr><th>№</th><th>Проблемный вопрос</th><th>Текущее состояние</th><th>Последствия</th><th>Что необходимо</th></tr></thead>
+        <tbody>
+          <tr class="crit"><td>1</td><td>Котельные ЖК «Самал Таун», «Family», «Абырой»</td><td>Изношены, не готовы к сезону; не приняты на баланс</td><td>Аварии в отопительный сезон</td><td>Принять на баланс; котлы и насосы — 435 млн</td></tr>
+          <tr class="crit"><td>2</td><td>Аварийные опоры ЛЭП</td><td>Осталось заменить 2 414 опор</td><td>Угроза безопасности жителей</td><td>554,4 млн на 2027 год</td></tr>
+          <tr class="crit"><td>3</td><td>Правобережные КОС</td><td>СМР 85%; долг 944,0 млн; ПНР не профинансированы</td><td>Остановка работ, срыв ввода</td><td>Остаток 4,5 млрд, погашение долга, ПНР</td></tr>
+          <tr><td>4</td><td>Кабельные сети 162 км</td><td>Высокий износ и аварийность</td><td>Отключения жилья и соцобъектов</td><td>15,9 млрд после утверждения БИП</td></tr>
+          <tr><td>5</td><td>Безнадзорные собаки</td><td>2-й договор не оплачен; скотомогильник аварийный</td><td>Риск у школ и детсадов</td><td>Финансирование, крематорий, ремонт</td></tr>
+          <tr><td>6</td><td>Водопровод, 1–3 этапы</td><td>Не хватает 3 097,4 млн</td><td>Срыв завершения в 2026</td><td>3 097,4 млн в текущем году</td></tr>
+          <tr><td>7</td><td>Рост тарифа на электроэнергию</td><td>+60,7% с 01.10.2026</td><td>Нехватка средств на оплату</td><td>509,6 млн (IV кв.); 2 038,4 млн в год</td></tr>
+          <tr><td>8</td><td>Жилищный фонд</td><td>379 МЖД старше 50 лет, из них 208 гипсоблочных; 345 домов без управления</td><td>Рост аварийности, невозможность ремонта</td><td>Обследование, создание ОСИ</td></tr>
+          <tr><td>9</td><td>Термомодернизация 2020–2022</td><td>10 объектов не завершены (712,4 млн)</td><td>Неэффективное использование средств</td><td>Завершить работы, проверить КСК/ПИК</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</div><!-- /stage -->
+
+<div class="controls" id="controls">
+  <button id="btnMenu" title="Список слайдов (M)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></button>
+  <button id="btnPrev" title="Назад (←)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <span class="cnt" id="cnt">1 / 22</span>
+  <button id="btnNext" title="Вперёд (→)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+  <button id="btnFs" title="Полный экран (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+</div>
+
+<div class="menu" id="menu">
+  <h3>Слайды <button id="menuClose" aria-label="Закрыть">×</button></h3>
+  <div class="menu-grid" id="menuGrid"></div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="x" aria-label="Закрыть">×</button>
+  <button class="arrow prev" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <div><img alt=""><p></p></div>
+  <button class="arrow next" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
